@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../screens/Home";
 import Request from "../screens/Request";
 import Profile from "../screens/Profile";
-
+import { Ionicons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -12,13 +12,28 @@ export default function AppNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={Home} />
-
         <Tab.Screen
-          name="Create"
+          name="Home"
+          component={Home}
+          options={{
+            headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons name="home" size={size} color={color} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Request"
           component={Request}
           options={{
             headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons
+                name="add-circle-outline"
+                size={size}
+                color={color}
+              />
+            ),
           }}
         />
 
@@ -27,6 +42,13 @@ export default function AppNavigator() {
           component={Profile}
           options={{
             headerShown: false,
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons
+                name="accessibility-outline"
+                size={size}
+                color={color}
+              />
+            ),
           }}
         />
       </Tab.Navigator>
