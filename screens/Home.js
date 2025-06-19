@@ -1,32 +1,22 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Ionicons, Entypo, MaterialIcons } from "@expo/vector-icons";
+import hienmau1 from "../assets/hienmau1.png"
 
 export default function Home() {
   return (
     <View className="flex-1 bg-white px-4 pt-12">
-      {/* Header */}
-      <View className="flex-row justify-between items-center mb-4">
-        <Text className="text-xl font-bold text-red-600">🩸 Blood Bestow</Text>
-        <Ionicons name="notifications-outline" size={24} color="gray" />
-      </View>
-
       {/* Location */}
       <View className="flex-row items-center mb-4">
         <Entypo name="location-pin" size={20} color="brown" />
         <Text className="text-base font-medium text-gray-700">
-          Ariyankuppam
+          Ho Chi Minh City, Vietnam
         </Text>
       </View>
 
       {/* Banner Image + Quote */}
       <View className="bg-red-100 rounded-xl p-4 mb-4">
-        <Image
-          source={{
-            uri: "https://cdn.pixabay.com/photo/2021/08/04/15/04/blood-donation-6521609_1280.png",
-          }}
-          className="w-full h-40 resize-contain mb-2"
-        />
+        <Image source={hienmau1} className="w-full h-40 resize-contain mb-2" />
         <Text className="text-center text-sm italic text-gray-600">
           "The measure of life is not its DURATION but its DONATION"
         </Text>
