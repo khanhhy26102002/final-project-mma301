@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Ionicons, Entypo, MaterialIcons } from "@expo/vector-icons";
-import hienmau1 from "../assets/hienmau1.png"
+import hienmau1 from "../../assets/hienmau1.png";
 
 export default function StaffHome() {
   return (
