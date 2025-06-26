@@ -1,9 +1,9 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { Ionicons, Entypo, MaterialIcons } from "@expo/vector-icons";
-import hienmau1 from "../assets/hienmau1.png"
+import hienmau1 from "../../assets/hienmau1.png"
 
-export default function Home() {
+export default function DonorHome() {
   return (
     <View className="flex-1 bg-white px-4 pt-12">
       {/* Location */}
